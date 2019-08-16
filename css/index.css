@@ -160,6 +160,15 @@ p {
   width: 100%;
   margin: 0 auto;
 }
+@keyframes pulse {
+  0%,
+  100% {
+    background-color: #F6F7F8;
+  }
+  50% {
+    background-color: #81848E;
+  }
+}
 nav {
   display: flex;
   justify-content: center;
@@ -189,6 +198,11 @@ nav #anchors a {
   text-align: center;
   text-decoration: none;
 }
+nav #anchors a:hover {
+  animation: pulse 3s ease infinite alternate;
+  border-radius: 5px;
+  padding: 3%;
+}
 @media (max-width: 500px) {
   nav {
     width: 95%;
@@ -214,6 +228,15 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@keyframes bloom {
+  0%,
+  100% {
+    background-color: #22283A;
+  }
+  50% {
+    background-color: #dee2e6;
+  }
 }
 .home .intro img {
   border-radius: 5px;
@@ -272,7 +295,8 @@ footer {
   border-radius: 5px;
 }
 .home .walk .walk-text .btn:hover {
-  color: black;
+  animation: bloom ease-in-out 2s forwards;
+  color: white;
   background: white;
   border: 1px solid black;
 }
