@@ -182,10 +182,12 @@ nav #anchors {
   width: 40%;
 }
 nav #anchors a {
-  padding: 0 2% 0 2%;
-  text-decoration: none;
   color: black;
   font-size: 2rem;
+  width: 100%;
+  padding: 0 2% 0 2%;
+  text-align: center;
+  text-decoration: none;
 }
 @media (max-width: 500px) {
   nav {
@@ -196,8 +198,11 @@ nav #anchors a {
     font-size: 3.5rem;
     margin: 2% 0;
   }
-  #anchors {
-    width: 90% !important;
+  nav #anchors {
+    width: 95%;
+  }
+  nav #anchors a {
+    font-size: 1.5rem;
   }
 }
 footer {
@@ -286,5 +291,47 @@ footer {
   }
   .home .intro .headerImg {
     width: 100%;
+  }
+  .home .space-images .blast {
+    width: 100%;
+  }
+  .home .space-images .sky {
+    display: none;
+  }
+  .home .space-images .launch {
+    display: none;
+  }
+  .home .walk {
+    margin: 0 0 4% 0;
+    padding: 3% 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  .home .walk .walk-text {
+    width: 95%;
+    margin: 3% auto 0 auto;
+  }
+  .home .walk .walk-text .btn {
+    display: flex;
+    font-size: 2rem;
+    background: black;
+    color: white;
+    width: 95%;
+    justify-content: center;
+    align-items: center;
+    padding: 6% 0 6% 0;
+    border-radius: 5px;
+    margin: auto;
+  }
+  .home .walk .walk-img {
+    margin: auto;
+    width: 95%;
+    order: -1;
+  }
+  .home footer {
+    margin: 0 0 4% 0;
   }
 }
