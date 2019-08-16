@@ -1,1 +1,66 @@
-// Navigation code here
+@keyframes pulse {
+    0%, 100% {
+    background-color: @porcelain;
+  }
+    50% {
+    background-color: @waterloo;
+  }
+}
+
+
+nav {
+    .flex(center, center);
+    flex-direction: column;
+    padding: 2% 0;
+    background: @nav-bg;
+    margin: 1% 0 0 0;
+
+    #logo {
+        font-size: 5rem;
+        font-family: 'Russo One', sans-serif;
+        color: black;
+        padding: 0 0 2% 0;
+    }
+
+    #anchors {
+        .flex(space-evenly, center);
+        width: 40%;
+
+        a {
+        color: black;
+        font-size: 2rem;
+        width: 100%;
+        padding: 0 2% 0 2%;
+        text-align: center;
+        text-decoration: none;
+        } 
+
+        a:hover {
+        animation: pulse 3s ease infinite alternate;
+        border-radius: 5px;
+        padding: 3%;
+        }
+    }
+}
+
+
+@media @phone {
+
+    nav {
+        width: 95%;
+        margin: 2% auto 0 auto;
+
+        #logo {
+            font-size: 3.5rem;
+            margin: 2% 0;
+        }
+
+      #anchors {
+        width: 95%;
+
+        a {
+            font-size: 1.5rem;
+            }  
+        }
+    }
+}

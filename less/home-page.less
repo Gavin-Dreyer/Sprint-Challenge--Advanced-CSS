@@ -1,8 +1,20 @@
 // Home Content
+@keyframes bloom {
+  0%, 100% {
+  background-color: @btn-bg-color;
+}
+  50% {
+  background-color: @border-real;
+}
+}
 
 .home {
 
   .intro {
+
+    img {
+      border-radius: 5px;
+    }
 
     h2 {
       padding: 15px;
@@ -58,6 +70,14 @@
       }
 
       .btn {
+        .button(2rem, black, white, 30%, center, center, 3% 2% 2% 2%, 5px);
+      }
+
+      .btn:hover {
+        animation: bloom ease-in-out 2s forwards;
+        color: white;
+        background: white;
+        border: 1px solid black;
       }
     }
 
@@ -73,3 +93,62 @@
     }
   }
 }// home
+
+@media @phone {
+
+  .home {
+    width: 95%;
+    
+    .intro {
+
+      .headerImg {
+        width: 100%;
+      }
+    }
+
+    .space-images {
+
+      .blast {
+        width: 100%;
+      }
+
+      .sky {
+        display: none;
+      }
+
+      .launch {
+        display: none;
+      }
+    }
+
+    .walk {
+      margin: 0 0 4% 0;
+      padding: 3% 0 0 0;
+
+      .flex(center, center);
+      flex-direction: column;
+      width: 100%;
+
+      .walk-text {
+        width: 95%;
+        margin: 3% auto 0 auto;
+
+        .btn {
+          .button(2rem, black, white, 95%, center, center, 6% 0 6% 0, 5px);
+          margin: auto;
+        }
+      }
+
+      .walk-img {
+        margin: auto;
+        width: 95%;
+        order: -1;
+      }
+    }
+
+    footer {
+      margin: 0 0 4% 0;
+    }
+  }
+}
+
