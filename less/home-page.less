@@ -62,8 +62,13 @@
       }
 
       .btn {
-
         .button(2rem, black, white, 30%, center, center, 3% 2% 2% 2%, 5px);
+      }
+
+      .btn:hover {
+        color: black;
+        background: white;
+        border: 1px solid black;
       }
     }
 
@@ -79,4 +84,18 @@
     }
   }
 }// home
+
+@media @phone {
+
+  .home {
+    width: 95%;
+    
+    .intro {
+
+      .headerImg {
+        width: 100%;
+      }
+    }
+  }
+}
 

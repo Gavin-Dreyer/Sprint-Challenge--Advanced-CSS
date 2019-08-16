@@ -187,6 +187,19 @@ nav #anchors a {
   color: black;
   font-size: 2rem;
 }
+@media (max-width: 500px) {
+  nav {
+    width: 95%;
+    margin: 2% auto 0 auto;
+  }
+  nav #logo {
+    font-size: 3.5rem;
+    margin: 2% 0;
+  }
+  #anchors {
+    width: 90% !important;
+  }
+}
 footer {
   color: #22283B;
   background: #f4f4f4;
@@ -253,6 +266,11 @@ footer {
   padding: 3% 2% 2% 2%;
   border-radius: 5px;
 }
+.home .walk .walk-text .btn:hover {
+  color: black;
+  background: white;
+  border: 1px solid black;
+}
 .home .walk .walk-img {
   width: 46%;
   margin-left: 4%;
@@ -261,4 +279,12 @@ footer {
   width: 100%;
   height: auto;
   border-radius: 10px;
+}
+@media (max-width: 500px) {
+  .home {
+    width: 95%;
+  }
+  .home .intro .headerImg {
+    width: 100%;
+  }
 }
